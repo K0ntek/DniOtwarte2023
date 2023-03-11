@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
+body{
+    background: url("https://images.unsplash.com/photo-1491183672482-d0af0e44929d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* .about{
+    background: linear-gradient(80deg, rgba(0,0,0,.1), black),url("https://cdn.mos.cms.futurecdn.net/h5NgQEGTcUwAyBzyNJwPue.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+} */
+
+*::selection{
+    background: rgb(220, 20, 60);
+    color: black;
+}
+ nav a::after{
+	content: "";
+	display: block;
+	width: 0;
+	height: 2px;
+    border-radius: 2px;
+	background: rgb(128, 0, 0);
+	transition: width 0.3s ease-in-out;
+    position: relative;
+    margin: auto;
+}
+
+ nav a:hover::after{
+    width: 100%;
+}
