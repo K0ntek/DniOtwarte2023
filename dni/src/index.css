@@ -29,12 +29,13 @@ body{
 	width: 0;
 	height: 2px;
     border-radius: 2px;
-	background: rgb(128, 0, 0);
+	background: black;
 	transition: width 0.3s ease-in-out;
     position: relative;
-    margin: auto;
+    margin: 5px auto;
 }
 
  nav a:hover::after{
     width: 100%;
+    margin: auto;
 }

@@ -13,11 +13,11 @@ const Navbar =()=>{
         },
         {
             title: 'QUIZ',
-            link: ''
+            link: '/QUIZ'
         },
     ]
     return(
-        <nav className='w-[100%] bg-black text-white fixed top-0 font-gruppo text-[20px] h-[60px] z-50'>
+        <nav className='w-[100%] bg-red-800 text-white fixed top-0 font-gruppo text-[20px] h-[60px] z-50'>
             <ul className='flex justify-center'>
                 {Navigation.map((element, key)=>{
                     return(

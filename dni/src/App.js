@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 //COMPONENTS
 import Navbar from './components/navbar';
 import Index from './components/index';
+import Quiz from './components/quiz';
 import Footer from './components/footer';
 
 document.title='Dni otwarte'
@@ -16,6 +17,7 @@ const App =()=>{
       <Navbar />
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/QUIZ" element={<Quiz />} />
         </Routes>
         <Footer/>
     </BrowserRouter>
