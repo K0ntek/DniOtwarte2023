@@ -39,3 +39,19 @@ body{
     width: 100%;
     margin: auto;
 }
+
+::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: rgb(0, 0, 0);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: crimson;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(255, 0, 51);
+  }

@@ -65,6 +65,25 @@ export default function Quiz() {
             "correctAnswer": 2
         }
     ]
+
+
+	// function randomQuestions(lngth) {
+	// 	let arr = [];
+	// 	do {
+	// 		let ran = Math.floor(Math.random() * questions.length); 
+	// 		arr = arr.indexOf(ran) > -1 ? arr : arr.concat(ran);
+	// 		let newQuestion =[];
+	// 		for (let i = 0; i<questions.length-1;i++){
+	// 		newQuestion.concat(ran);
+	// 	}
+	// 	 }while (arr.length < lngth)
+	// 	 return arr;
+	//   }
+	  
+	//   const res = randomQuestions(questions.length-1);
+	  
+	//   console.log(res);
+	  
     
 
 
@@ -80,8 +99,8 @@ export default function Quiz() {
 	}
 
     function setAnswer(question, answer) {
-		console.log(question, answer);
-		console.log(answers[question]);
+		// console.log(question, answer);
+		// console.log(answers[question]);
 		if (answers[question] !== undefined) {
 			setAnswers(
 				answers.map((a, i) => {
@@ -95,7 +114,7 @@ export default function Quiz() {
 		} else {
 			const newAnswers = [...answers];
 			newAnswers[question] = answer;
-			console.log(newAnswers);
+			// console.log(newAnswers);
 			setAnswers(newAnswers);
 		}
 	}
@@ -179,14 +198,16 @@ export default function Quiz() {
 
 	if (quizFinished) {
 		return (
-			<div className="formularz" id="formularz">
-				<div>
-					<h1 style={{ fontSize: "3rem", color: "white" }}>Twój Wynik:</h1>
-					<h2 style={{ color: "white" }}>
-						<span style={{ fontSize: "5rem" }}>{score}</span>/{questions.length}
+			<div className="formularz bg-black w-[80%] mx-auto my-[100px] py-[50px] grid grid-cols-[30%_10px_69%] rounded-3xl" id="formularz">
+				<div className="text-center">
+					<h1 className="text-[crimson] font-gruppo font-bold text-[60px]">Twój Wynik:</h1>
+					<div className="">
+					<h2 className=" font-orbitron text-white text-[40px]">
+						<span className="text-[70px]">{score}</span>/{questions.length}
 					</h2>
+					</div>
 				</div>
-				<div className="line"></div>
+				<div className="w-[2px] h-[100%] bg-[crimson] ml-[-60px]"></div>
 				<div>
 					<ResultsTable overflow="scroll" />
 				</div>
@@ -217,7 +238,7 @@ export default function Quiz() {
 						))}
 					</ul>
 
-					<div className="buttons ml-[-50px]">
+					<div className="buttons absolute bottom-[20%] ml-[-50px]">
 						{currentQuestion !== 0 ? (
 							<button className="prev mx-[10px] mt-[40px] px-[25px] py-[10px] border-[2px] border-[crimson] font-gruppo font-extrabold text-[20px] text-[#ffa9ba] rounded-full hover:bg-[crimson] hover:text-black transition-all duration-300" onClick={() => setCurrentQuestion(currentQuestion - 1)}>
 								Poprzednie

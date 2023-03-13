@@ -7,6 +7,7 @@ import Navbar from './components/navbar';
 import Index from './components/index';
 import Quiz from './components/quiz';
 import Footer from './components/footer';
+import ResultsTable from './components/ResultsTable';
 
 document.title='Dni otwarte'
 

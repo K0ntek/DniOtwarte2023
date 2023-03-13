@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer =()=>{
     return(
-        <div className="p-[50px] bg-black flex flex-col lg:flex-row border-t-[10px] border-red-600">
+        <div className="p-[50px] bg-black flex flex-col lg:flex-row border-t-[10px] border-red-600 m-auto justify-center">
             <div className="text-white w-[30%]">
                 <h1 className="text-[20px] border-l-[3px] border-[crimson] pl-[10px]">KONTAKT</h1>
                 <p className=" text-[17px] w-[80%]">Zespół Szkół Technicznych
@@ -21,12 +21,12 @@ const Footer =()=>{
                     <h2 className=" font-semibold">E-mail:</h2>
                 <p>szkola@zstiojar.edu.pl</p>
             </div>
-            <div className="text-white w-[30%]">
+            {/* <div className="text-white w-[30%]">
                 <h1 className="text-[20px] border-l-[3px] border-[crimson] pl-[10px]">ARCHIWUM</h1>
                 <p>marzec 2023<br/>
                 luty 2023<br/>
                 styczeń 2023</p>
-            </div>
+            </div> */}
             <div className="text-white">
                 <h1 className="text-[20px] border-l-[3px] border-[crimson] pl-[10px]">MAPA</h1>
                 <iframe

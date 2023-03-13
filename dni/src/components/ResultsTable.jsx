@@ -16,17 +16,17 @@ export default function ResultsTable(props) {
 		// });
 		// socket.emit("get_results");
 
-		return () => {
-			// socket.off("results");
-		};
+		// return () => {
+		// 	socket.off("results");
+		// };
 	}, []);
 	return (
 		<div
-			className="results-wrapper"
-			style={{
-				padding: props.overflow === "hide" ? "5rem" : "",
-				overflowY: props.overflow === "scroll" ? "auto" : "hidden",
-			}}
+			className="results-wrapper my-[100px] bg-black"
+			// style={{
+			// 	padding: props.overflow === "hide" ? "5rem" : "",
+			// 	overflowY: props.overflow === "scroll" ? "auto" : "hidden",
+			// }}
 		>
 			<table style={{ width: "100%", color: "white", fontSize: "2rem" }}>
 				<thead>
@@ -38,7 +38,7 @@ export default function ResultsTable(props) {
 				</thead>
 				<tbody>
 					{results.map((result, i) => (
-						<tr key={i}>
+						<tr key={i} className="border-b-[2px] border-[crimson]">
 							<td>{i + 1}</td>
 							<td>{result.name}</td>
 							<td>{result.result}</td>
