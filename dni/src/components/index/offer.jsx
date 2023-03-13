@@ -62,9 +62,9 @@ const Offer =()=>{
             <div>
                 <div className="w-[100%] grid grid-cols-3 gap-[30px]">
                     <div className="offer items-center text-center my-auto">
-                        <h2 className="text-[40px] font-gruppo font-extrabold text-[crimson]">OFERTA SZKOŁY</h2>
+                        <h2 className="text-[40px] font-gruppo font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-fuchsia-600">OFERTA SZKOŁY</h2>
                         <p className="text-[20px] text-justify w-[80%] mx-auto my-[20px]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia animi debitis vero eius quo id velit voluptatum ipsum voluptas iure?</p>
-                        <button className=" border-[2px] border-[crimson] text-[crimson] px-[20px] py-[10px] font-gruppo font-extrabold text-[20px] rounded-full hover:bg-[crimson] hover:text-black transition-all duration-300">Dowiedz się więcej</button>
+                        <button className=" border-[2px] border-[crimson] text-[crimson] px-[20px] py-[10px] font-gruppo font-extrabold text-[20px] rounded-full bg-gradient-to-r hover:from-fuchsia-700 hover:to-red-700 hover:text-white transition-all duration-300">Dowiedz się więcej</button>
                     </div>
                     {kierunki.map((kierunek, key)=>{
                         return(

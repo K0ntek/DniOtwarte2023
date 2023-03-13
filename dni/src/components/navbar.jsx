@@ -9,7 +9,7 @@ const Navbar =()=>{
         },
         {
             title: 'WIRTUALNY SPACER PO SZKOLE',
-            link: 'https://app.lapentor.com/sphere/spacer-2021?scene=61783cd4a156fd7be93f1d62'
+            link: 'https://app.lapentor.com/sphere/spacer-2021?scene=619b985098d38917c05e70e5'
         },
         {
             title: 'QUIZ',
@@ -21,7 +21,6 @@ const Navbar =()=>{
             <ul className='flex justify-center'>
                 {Navigation.map((element, key)=>{
                     return(
-                        //<a href={element.link} className=' after:content-'><li index={key} className='px-[20px] py-[10px] mx-[30px] my-[10px]'>{element.title}</li></a>
                         <li index={key} className='mx-[30px] my-[15px]'><Link to={element.link} className='px-[20px] py-[10px]'>{element.title}</Link></li>
                     )
                 })}

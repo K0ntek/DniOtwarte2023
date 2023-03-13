@@ -44,7 +44,7 @@ const Banner =()=>{
                 <a href="https://www.youtube.com/@zstio_fm"><GrYoutube className='hover:text-red-900 transition-all duration-300 mx-[10px]'/></a>
                 <a href="https://www.tiktok.com/@zstio.fm"><FaTiktok className='hover:text-red-900 transition-all duration-300 mx-[10px]'/></a>
             </div>
-            <button className=' font-gruppo font-extrabold text-[30px] border-[2px] border-[crimson] text-[crimson] px-[45px] py-[15px] mt-[10px] rounded-full mb-[20px] hover:bg-[crimson] hover:text-black transition-all duration-300'>Przejdź do quizu</button>
+            <button className=' font-gruppo font-extrabold text-[30px] border-[2px] border-[crimson] text-[crimson] px-[45px] py-[15px] mt-[10px] rounded-full mb-[20px] bg-gradient-to-r hover:from-fuchsia-700 hover:to-red-700 hover:text-white transition-all duration-300'>Przejdź do quizu</button>
             </div>
 
         {/* <img src="https://images.unsplash.com/photo-1616440347437-b1c73416efc2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGMlMjBzZXR1cHxlbnwwfHwwfHw%3D&w=1000&q=80" className='bannerImg w-[90%] max-w-[600px] rounded-full mx-auto'/> */}

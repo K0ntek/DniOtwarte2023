@@ -10,7 +10,6 @@ module.exports = {
       'gruppo': ['Gruppo']
     },
     extend: {
-      'gradient': ['text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-[crimson]']
     },
   },
   plugins: [],

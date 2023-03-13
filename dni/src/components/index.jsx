@@ -8,6 +8,7 @@ const Index =()=>{
         <>
             <Banner />
             <About/>
+            <div className="w-full h-[10px] bg-gradient-to-r from-fuchsia-700 to-red-700"></div>
             <Offer/>
         </>
     )

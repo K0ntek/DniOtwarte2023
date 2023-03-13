@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import Banach from "../stefan_banach_glo970-0-Enhanced-Animated.mp4";
+import ResultsTable from "./ResultsTable";
 
 export default function Quiz() {
 	const [name, setName] = useState("");
@@ -106,65 +108,69 @@ export default function Quiz() {
 
 	if (!formFilled)
 		return (
-			<div className="mt-[100px] w-[80%] m-auto bg-black text-white p-[20px] rounded-3xl justify-center text-center" id="formularz">
+			<div className="my-[100px] w-[80%] m-auto bg-black text-white px-[20px] py-[100px] rounded-3xl justify-center text-center grid grid-cols-[30%_2px_69%]" id="formularz">
 				<div className="form_content">
-					<h1>WPROWADŹ DANE, ABY ROZPOCZĄĆ QUIZ O NASZEJ SZKOLE</h1>
+					<h1 className=" font-orbitron text-[40px] text-center m-auto py-[50px]">WPROWADŹ DANE, ABY ROZPOCZĄĆ QUIZ O NASZEJ SZKOLE</h1>
 				</div>
-				<div className="line"></div>
-				<div className="form">
-                    <div className="flex justify-center m-auto text-center">
-                        <p>Imię i nazwisko (opcjonalnie): </p>
+				<div className=" w-[2px] h-[100%] ml-[20px] bg-[crimson]"></div>
+				<div className="form my-auto">
+					<div className="justify-center m-auto text-center grid grid-cols-2">
+                        <p className="text-[20px] font-mono text-right">Imię i nazwisko (opcjonalnie): </p>
 					<input
 						value={name}
 						onChange={(e) => setName(e.target.value)}
 						type="text"
-						className="dane bg-transparent text-white border-b-[2px] border-[crimson] ml-[10px] py-[5px] px-[20px] focus:outline-none"
+						className="dane w-[50%] bg-transparent text-white border-b-[2px] border-[crimson] ml-[10px] py-[5px] px-[20px] 
+									focus:outline-none outline-transparent focus:border-white transition-all duration-300"
 						name="dane"
 					/></div>
 					<br />
 
-                <div className="flex justify-center m-auto text-center">
-                  <p>Pseudonim: </p>
+                <div className=" justify-center m-auto text-center grid grid-cols-2">
+                  <p className="text-[20px] font-mono text-right">Pseudonim: </p>
 					<input
 						value={username}
 						onChange={(e) => setUsername(e.target.value)}
 						type="text"
 						// placeholder="Pseudonim"
-						className="dane bg-transparent text-white border-b-[2px] border-[crimson] ml-[10px] py-[5px] px-[20px] focus:outline-none"
+						className="dane w-[50%] bg-transparent text-white border-b-[2px] border-[crimson] ml-[10px] py-[5px] px-[20px]
+									focus:outline-none outline-transparent focus:border-white transition-all duration-300"
 						name="nick"
 						id="nickName"
 					/>
                   </div>
 					<br />
 
-                    <div className="flex justify-center m-auto text-center">
-                    <p>Szkoła: </p>
+                    <div className=" justify-center m-auto text-center grid grid-cols-2">
+                    <p className="text-[20px] font-mono text-right">Szkoła: </p>
 					<input
 						value={school}
 						onChange={(e) => setSchool(e.target.value)}
 						type="text"
 						// placeholder="Szkoła"
-						className="dane bg-transparent text-white border-b-[2px] border-[crimson] ml-[10px] py-[5px] px-[20px] focus:outline-none"
+						className="dane w-[50%] bg-transparent text-white border-b-[2px] border-[crimson] ml-[10px] py-[5px] px-[20px]
+									 focus:outline-none outline-transparent focus:border-white transition-all duration-300"
 						name="szkola"
 					/>
                     </div>
 					<br />
 
-                    <div className="flex justify-center m-auto text-center">
-                   <p>Miejscowość: </p>
+                    <div className=" justify-center m-auto text-center grid grid-cols-2">
+                   <p className="text-[20px] font-mono text-right">Miejscowość: </p>
 					<input
 						value={city}
 						onChange={(e) => setCity(e.target.value)}
 						type="text"
 						// placeholder="Miejscowość"
-						className="dane bg-transparent text-white border-b-[2px] border-[crimson] ml-[10px] py-[5px] px-[20px] focus:outline-none"
+						className="dane w-[50%] bg-transparent text-white border-b-[2px] border-[crimson] ml-[10px] py-[5px] px-[20px]
+								 focus:outline-none outline-transparent focus:border-white transition-all duration-300"
 						name="miejscowosc"
 					/>
                    </div>
 					<br />
 
 					{/* <input type="button" value="Prześlij" className="send" id="send" /> */}
-					<button className="send border-[2px] border-[crimson] rounded-full px-[25px] py-[10px] font-gruppo font-extrabold text-[20px] " id="send" onClick={startQuiz}>
+					<button className="send mt-[30px] border-[2px] border-[crimson] rounded-full px-[25px] py-[10px] font-gruppo font-extrabold text-[20px] hover:bg-[crimson] hover:text-white transition-all duration-300" id="send" onClick={startQuiz}>
 						Rozpocznij
 					</button>
 				</div>
@@ -182,25 +188,26 @@ export default function Quiz() {
 				</div>
 				<div className="line"></div>
 				<div>
-					{/* <ResultsTable overflow="scroll" /> */}
+					<ResultsTable overflow="scroll" />
 				</div>
 			</div>
 		);
 	}
 
 	return (
-		<div className="quiz" id="quiz">
-			<div className="questions">
-				<h1>Pytanie {currentQuestion + 1}</h1>
-				<p>{questions[currentQuestion].question}</p>
-				<div className="answers">
+			<div className="quiz" id="quiz">
+			<div className="questions my-[100px] w-[80%] m-auto bg-black rounded-3xl text-white px-[20px] py-[100px] grid grid-cols-2">
+				<div>
+				<h1 className="font-orbitron text-[40px] ml-[50px]">Pytanie <span className="text-[crimson]">{currentQuestion + 1}</span></h1>
+				<p className="text-[25px] font-gruppo font-extrabold ml-[150px]">{questions[currentQuestion].question}</p>
+				<div className="answers ml-[150px]">
 					<ul>
 						{questions[currentQuestion].answers.map((answer, i2) => (
-							<li key={answer}>
-								<label>
+							<li key={answer} className="font-orbitron my-[10px] text-[20px]">
+								<label className="p-[10px] rounded-xl hover:bg-white/20">
 									<input
 										type="radio"
-										className="in-radio"
+										className="in-radio mr-[10px] accent-[crimson]"
 										onChange={(e) => setAnswer(currentQuestion, i2)}
 										checked={answers[currentQuestion] === i2}
 									/>
@@ -210,23 +217,23 @@ export default function Quiz() {
 						))}
 					</ul>
 
-					<div className="buttons">
+					<div className="buttons ml-[-50px]">
 						{currentQuestion !== 0 ? (
-							<button className="prev" onClick={() => setCurrentQuestion(currentQuestion - 1)}>
+							<button className="prev mx-[10px] mt-[40px] px-[25px] py-[10px] border-[2px] border-[crimson] font-gruppo font-extrabold text-[20px] text-[#ffa9ba] rounded-full hover:bg-[crimson] hover:text-black transition-all duration-300" onClick={() => setCurrentQuestion(currentQuestion - 1)}>
 								Poprzednie
 							</button>
 						) : (
 							<></>
 						)}
 						{currentQuestion !== questions.length - 1 ? (
-							<button className="next" onClick={() => setCurrentQuestion(currentQuestion + 1)}>
+							<button className="next mx-[10px] mt-[40px] px-[25px] py-[10px] border-[2px] border-[crimson] font-gruppo font-extrabold text-[20px] text-[#ffa9ba] rounded-full hover:bg-[crimson] hover:text-black transition-all duration-300" onClick={() => setCurrentQuestion(currentQuestion + 1)}>
 								Następne
 							</button>
 						) : (
 							<></>
 						)}
 						{currentQuestion === questions.length - 1 ? (
-							<button className="next" onClick={showScore}>
+							<button className="next mx-[10px] mt-[40px] px-[25px] py-[10px] border-[2px] border-[crimson] font-gruppo font-extrabold text-[20px] text-[#ffa9ba] rounded-full hover:bg-[crimson] hover:text-black transition-all duration-300" onClick={showScore}>
 								Zakończ
 							</button>
 						) : (
@@ -234,6 +241,11 @@ export default function Quiz() {
 						)}
 					</div>
 				</div>
+				</div>
+				<video loop autoPlay muted className="rounded-full">
+					<source src={Banach} type="video/mp4">
+					</source>
+				</video>
 			</div>
 		</div>
 	);
