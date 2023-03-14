@@ -18,13 +18,13 @@ const About =()=>{
      },[])
 
     return(
-        <div className="bg-black p-[100px] text-[20px] border-t-[10px] border-red-600" ref={ref}>
+        <div className="bg-black p-[100px] text-[20px] border-t-[10px] border-red-600 overflow-hidden" ref={ref}>
             <h1 className=" font-orbitron text-center text-[40px] text-red-600 mb-[50px]">O SZKOLE</h1>
 
-            <div className="about flex justify-center space-x-10 sm:space-x-[150px]">
-                <div className="group element hover:bg-gradient-to-r hover:from-fuchsia-600 hover:to-[crimson] rounded-3xl ">
+            <div className="about flex justify-center space-x-10 sm:space-x-[150px] group hover:scale-125">
+                <div className="group element hover:bg-gradient-to-r hover:from-fuchsia-600 hover:to-[crimson] rounded-3xl">
                     <div className="text-center p-[20px] rounded-3xl border-[2px] border-[crimson]">
-                        <div className=" text-[50px] font-orbitron text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-[crimson] group-hover:text-black">
+                        <div className=" text-[50px] font-orbitron text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-[crimson] group-hover:text-black ">
                             {inView ? <CountUp start={0} end={8} duration={2}/> : 0}
                         </div>
                         <div className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-[crimson] font-gruppo font-bold text-[25px] group-hover:text-black"><p>Kierunków<br/> Technikum</p></div>

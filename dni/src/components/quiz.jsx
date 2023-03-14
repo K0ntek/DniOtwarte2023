@@ -13,7 +13,7 @@ export default function Quiz() {
 	const [quizFinished, setQuizFinished] = useState(false);
 	const [score, setScore] = useState(0);
 
-    const questions = [
+    const originalQuestions = [
         {
             "question": "Ile jest osób w sali 32?",
             "answers": ["12", "10", "2", "15"],
@@ -66,24 +66,26 @@ export default function Quiz() {
         }
     ]
 
+	function shuffle(array) {
+		let currentIndex = array.length,  randomIndex;
 
-	// function randomQuestions(lngth) {
-	// 	let arr = [];
-	// 	do {
-	// 		let ran = Math.floor(Math.random() * questions.length); 
-	// 		arr = arr.indexOf(ran) > -1 ? arr : arr.concat(ran);
-	// 		let newQuestion =[];
-	// 		for (let i = 0; i<questions.length-1;i++){
-	// 		newQuestion.concat(ran);
-	// 	}
-	// 	 }while (arr.length < lngth)
-	// 	 return arr;
-	//   }
-	  
-	//   const res = randomQuestions(questions.length-1);
-	  
-	//   console.log(res);
-	  
+		// While there remain elements to shuffle.
+		while (currentIndex != 0) {
+
+			// Pick a remaining element.
+			randomIndex = Math.floor(Math.random() * currentIndex);
+			currentIndex--;
+
+			// And swap it with the current element.
+			[array[currentIndex], array[randomIndex]] = [
+			array[randomIndex], array[currentIndex]];
+		}
+
+		return array;
+		}
+
+	const questions = shuffle(originalQuestions)
+
     
 
 
@@ -99,8 +101,8 @@ export default function Quiz() {
 	}
 
     function setAnswer(question, answer) {
-		// console.log(question, answer);
-		// console.log(answers[question]);
+		console.log(question, answer);
+		console.log(answers[question]);
 		if (answers[question] !== undefined) {
 			setAnswers(
 				answers.map((a, i) => {
@@ -114,7 +116,7 @@ export default function Quiz() {
 		} else {
 			const newAnswers = [...answers];
 			newAnswers[question] = answer;
-			// console.log(newAnswers);
+			console.log(newAnswers);
 			setAnswers(newAnswers);
 		}
 	}

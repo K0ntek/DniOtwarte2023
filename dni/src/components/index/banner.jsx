@@ -33,7 +33,7 @@ const Banner =()=>{
                     100
                 ]}
                 repeat={Infinity}
-                className='text-[60px] text-red-800 text-center w-full animation'
+                className='text-[60px] text-red-800 text-center w-full animation font-orbitron font-extralight'
             />
             <p className=' text-[20px] text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id consectetur molestias tempore omnis. Sed cumque totam ipsam fuga in fugit!
             </p>
