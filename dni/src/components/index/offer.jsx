@@ -61,7 +61,7 @@ const Offer =()=>{
         gsap.registerPlugin(ScrollTrigger)
         gsap.fromTo('.offers .offer', {y:'200px', opacity:0}, {y:0, opacity:1, duration:.7, stagger:.2,
             scrollTrigger:{trigger:'.offers',
-                            start:'top 90%',
+                            start:'top 80%',
                             toggleActions: "restart",
     }})
     },[])

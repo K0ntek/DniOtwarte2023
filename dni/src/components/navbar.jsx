@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import gsap from "gsap";
 
 const Navbar =()=>{
+    useEffect(()=>{
+        gsap.fromTo('.navbar', {y:'-100%'}, {y:0, duration:.4, ease: "ease-in-out", delay:.2})
+    },[])
     const Navigation=[
         {
             title: 'STRONA GŁÓWNA',
@@ -17,7 +21,7 @@ const Navbar =()=>{
         },
     ]
     return(
-        <nav className='w-[100%] bg-red-800 text-white fixed top-0 font-gruppo text-[20px] h-[60px] z-50'>
+        <nav className='navbar w-[100%] bg-red-800 text-white fixed top-0 font-gruppo text-[20px] h-[60px] z-50'>
             <ul className='flex justify-center'>
                 {Navigation.map((element, key)=>{
                     return(
