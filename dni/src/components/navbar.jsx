@@ -2,9 +2,10 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 
+
 const Navbar =()=>{
     useEffect(()=>{
-        gsap.fromTo('.navbar', {y:'-100%'}, {y:0, duration:.4, ease: "ease-in-out", delay:.2})
+        gsap.fromTo('.navbar', {y:'-100%'}, {y:0, duration:.4, ease: "ease-in-out", delay:2})
     },[])
     const Navigation=[
         {

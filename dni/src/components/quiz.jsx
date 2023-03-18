@@ -21,7 +21,7 @@ export default function Quiz() {
         },
         {
             "question": "Jaki jest wzór na drzwiach w sali 36?",
-            "answers": ["Δ=b<sup>2</sup>-4ac", "P=a<sup>2</sup>", "E=mc<sup>2</sup>", "OBJ= a<sup>3</sup>"],
+            "answers": ["Δ=b2-4ac", "P=a2", "E=mc2", "OBJ= a3"],
             "correctAnswer": 2
         },
         {
@@ -66,7 +66,7 @@ export default function Quiz() {
         }
     ]
 
-	function shuffle(array) {
+	const shuffle=(array)=> {
 		let currentIndex = array.length,  randomIndex;
 
 		// While there remain elements to shuffle.

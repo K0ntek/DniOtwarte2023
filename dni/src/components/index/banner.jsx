@@ -8,12 +8,14 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { Link } from "react-router-dom";
 
+import BannerAnimation from "./boxes";
+
 const Banner =()=>{
 
     useEffect(()=>{
         gsap.registerPlugin(ScrollTrigger);
-        gsap.fromTo('.banner .title, .banner .animation, .banner .text', {x:"-200px", opacity:0}, {x:0, opacity:1, duration:.7, stagger:.2, ease:'easeInOut'});
-        gsap.fromTo('.socials a', {x:"100px", opacity:0}, {x:0, opacity:1, duration:.5, stagger:.1, delay:1})
+        gsap.fromTo('.banner .title, .banner .animation, .banner .text', {x:"-200px", opacity:0}, {x:0, opacity:1, duration:.7, stagger:.2, delay:2, ease:'easeInOut'});
+        gsap.fromTo('.socials a', {x:"100px", opacity:0}, {x:0, opacity:1, duration:.5, stagger:.1, delay:3})
     },[])
 
     const offers=()=>{
@@ -22,8 +24,8 @@ const Banner =()=>{
     }
 
     return(
-    <div className=' header flex flex-col lg:container mx-auto lg:flex-row items-center my-[30px] font-mono w-[100%] h-screen'>
-        <div className=' banner w-[80%] lg:w-[50%] text-center'>
+    <div className=' header grid lg:grid-cols-2 lg:container mx-auto lg:flex-row items-center my-[30px] font-mono w-[100%] h-screen'>
+        <div className=' banner w-[70%] m-auto lg:w-full text-center'>
         <h1 className='title text-[25px] sm:text-[40px] text-center font-orbitron'>Zespół Szkół Technicznych i Ogólnokształcacych</h1>
             <TypeAnimation
                 sequence={[
@@ -47,6 +49,10 @@ const Banner =()=>{
             </div>
            <Link to='/QUIZ'> <button className=' font-gruppo font-extrabold text-[30px] border-[2px] border-[crimson] text-[crimson] px-[45px] py-[15px] mt-[10px] rounded-full mb-[20px] bg-gradient-to-r hover:from-fuchsia-700 hover:to-red-700 hover:text-white transition-all duration-300'>Przejdź do quizu</button></Link>
             </div>
+
+        <div>
+            <BannerAnimation />
+        </div>
 
         {/* <img src="https://images.unsplash.com/photo-1616440347437-b1c73416efc2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGMlMjBzZXR1cHxlbnwwfHwwfHw%3D&w=1000&q=80" className='bannerImg w-[90%] max-w-[600px] rounded-full mx-auto'/> */}
     </div>    
