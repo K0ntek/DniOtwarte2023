@@ -36,7 +36,9 @@ const About =()=>{
      ]
 
     return(
-        <div className="bg-black p-[100px] text-[20px] border-t-[10px] border-red-600 overflow-hidden" ref={ref}>
+        <>
+        <div className="h-[10px] w-full bg-gradient-to-r from-red-600 to-fuchsia-700"></div>
+         <div className="bg-black p-[100px] text-[20px] overflow-hidden" ref={ref}>
             <h1 className=" font-orbitron text-center text-[40px] text-red-600 mb-[50px]">O SZKOLE</h1>
 
             <div className="about flex justify-center space-x-10 sm:space-x-[150px]">
@@ -58,6 +60,8 @@ const About =()=>{
                     })}
             </div>
         </div>
+        </>
+
 
     )
 }
