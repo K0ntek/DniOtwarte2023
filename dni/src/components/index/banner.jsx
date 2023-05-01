@@ -24,7 +24,7 @@ const Banner =()=>{
     }
 
     return(
-    <div className=' header grid lg:grid-cols-2 lg:container mx-auto lg:flex-row items-center my-[30px] font-mono w-[100%] h-screen'>
+    <div className=' header grid 2xl:grid-cols-2 2xl:container mx-auto 2xl:flex-row items-center my-[30px] mt-[60px] font-mono w-[100%] min-h-screen'>
         <div className=' banner w-[70%] m-auto lg:w-full text-center'>
         <h1 className='title text-[25px] sm:text-[40px] text-center font-orbitron'>Zespół Szkół Technicznych i Ogólnokształcacych</h1>
             <TypeAnimation
@@ -35,7 +35,7 @@ const Banner =()=>{
                     100
                 ]}
                 repeat={Infinity}
-                className='text-[60px] text-red-800 text-center w-full animation font-orbitron font-extralight'
+                className='text-[60px] text-red-800 text-center w-full animation font-orbitron font-extralight h-[200px]'
             />
             <p className=' text-[25px] font-gruppo font-extrabold'><span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-red-600 font-orbitron font-bold">"Sapere Aude"</span>- Odważ się być mądrym
             </p>

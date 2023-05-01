@@ -37,7 +37,7 @@ const BannerAnimation = () =>{
     },[])
     
     return(
-        <div className="boxes w-[80%] flex m-auto relative">
+        <div className="boxes w-[80%] 2xl:flex m-auto relative hidden">
                 <div className="box border-[2px] border-black w-[200px] h-[200px] relative left-[200px]">
                     <div className="Ibox border-[2px] border-black w-[200px] h-[200px] absolute top-0 left-0 my-auto m-[2px]">
                     </div>

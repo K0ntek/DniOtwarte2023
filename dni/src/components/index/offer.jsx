@@ -26,7 +26,7 @@ const Offer =()=>{
             link:'https://strona.zstiojar.edu.pl/technik-grafiki-i-poligrafii-cyfrowej/'
         },
         {
-            img:'https://zstiojar.edu.pl/wp-content/uploads/2023/02/technik-mechanik.jpg',
+            img:'https://www.magazyn-motoryzacyjny.pl/wp-content/uploads/2022/04/20220407183040_pexels-photo-4489749.jpeg-780x470.jpg',
             title:'Technik Mechanik',
             desc:'Wykonywanie prac projektowych, produkcyjnych oraz remontowo–instalacyjnych maszyn i urządzeń technicznych.',
             link:'https://strona.zstiojar.edu.pl/technik-mechanik/'
@@ -67,12 +67,12 @@ const Offer =()=>{
     },[])
 
     return(
-        <div className="offers bg-white p-[100px]">
+        <div className="offers bg-white sm:p-[100px] py-[50px]">
             <div>
-                <div className="w-[100%] grid grid-cols-3 gap-[30px]">
+                <div className=" w-[80%] mx-auto sm:w-[100%] grid sm:grid-cols-3 gap-[30px]">
                     <div className="offer items-center text-center my-auto">
                         <h2 className="text-[40px] font-gruppo font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-fuchsia-600">OFERTA SZKOŁY</h2>
-                        <p className="text-[20px] text-justify w-[80%] mx-auto my-[20px]">ZSTiO znajduje się w samym centrum Jarosławia, dzięki temu uczniowie dojeżdżający spoza miasta nie maja kłopotów z dotarciem do szkoły.</p>
+                        <p className="text-[20px] text-justify w-full sm:w-[80%] mx-auto my-[20px]">ZSTiO znajduje się w samym centrum Jarosławia, dzięki temu uczniowie dojeżdżający spoza miasta nie maja kłopotów z dotarciem do szkoły.</p>
                         <Link to="https://zstiojar.edu.pl/technikum-nr-2-im-stefana-banacha/"><button className=" border-[2px] border-[crimson] text-[crimson] px-[20px] py-[10px] font-gruppo font-extrabold text-[20px] rounded-full bg-gradient-to-r hover:from-fuchsia-700 hover:to-red-700 hover:text-white transition-all duration-300">Dowiedz się więcej</button></Link>
                     </div>
                     {kierunki.map((kierunek, key)=>{

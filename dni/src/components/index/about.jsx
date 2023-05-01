@@ -41,7 +41,7 @@ const About =()=>{
          <div className="bg-black p-[100px] text-[20px] overflow-hidden" ref={ref}>
             <h1 className=" font-orbitron text-center text-[40px] text-red-600 mb-[50px]">O SZKOLE</h1>
 
-            <div className="about flex justify-center space-x-10 sm:space-x-[150px]">
+            <div className="about sm:flex justify-center space-y-[30px] sm:space-y-0 sm:space-x-[150px]">
                     {countElements.map((countElement, i)=>{
                         return(
                             <>

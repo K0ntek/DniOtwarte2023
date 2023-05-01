@@ -49,3 +49,39 @@ body{
   ::-webkit-scrollbar-thumb:hover {
     background: rgb(255, 0, 51);
   }
+
+  .navbar{
+    transition: .5s;
+  }
+  
+  .activeNavbar {
+    position: fixed;
+    top:40px;
+    left:20%;
+    display: block;
+  }
+  
+  .line{
+    width: 30px;
+    height: 2px;
+    border-radius: 2px;
+    background: #2e1f08;
+    transition: .3s;
+  }
+  .activeIcon .item-1{
+    transform: rotate(45deg);
+    position: relative;
+    top:4px;
+    transition: .3s;
+  }
+  
+  .activeIcon .item-2{
+    display: none;
+  }
+  
+  .activeIcon .item-3{
+    transform: rotate(-45deg);
+    position: relative;
+    top:-4px;
+    transition: .3s;
+  }

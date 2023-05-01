@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 
@@ -21,9 +21,31 @@ const Navbar =()=>{
             link: '/QUIZ'
         },
     ]
+
+    const [activeNavbar, setNavbar] = useState('navbar')
+    const toggleNavbar =()=>{
+        activeNavbar === 'navbar' ? setNavbar('navbar activeNavbar') : setNavbar('navbar');
+    }
+
+    const [activeIcon, setIcon] = useState('icon')
+
+        const icon =()=>{
+            activeIcon === 'icon' ? setIcon('icon activeIcon') : setIcon('icon');
+        }
+
+
     return(
-        <nav className='navbar w-[100%] bg-red-700 text-white fixed top-0 font-gruppo text-[20px] h-[60px] z-50'>
-            <ul className='flex justify-center'>
+      <>
+          <div className="w-[30px] fixed top-[1%] right-[1%] md:hidden" onClick={toggleNavbar}>
+        <div className={activeIcon} onClick={icon}>
+            <div className="line item-1 my-[6px]"></div>
+            <div className="line item-2 my-[6px]"></div>
+            <div className="line item-3 my-[6px]"></div>
+        </div>
+        </div>
+
+        <nav className={`fixed top-[40px] md:top-0 left-[100%] md:left-0 bg-red-700 w-[80%] text-black font-orbitron md:w-full h-[100%] md:h-[60px] z-40 overflow-hidden ${activeNavbar}`}>
+            <ul className='md:flex justify-center'>
                 {Navigation.map((element, key)=>{
                     return(
                         <li index={key} className='mx-[30px] my-[15px]'><Link to={element.link} className='px-[20px] py-[10px]'>{element.title}</Link></li>
@@ -31,6 +53,7 @@ const Navbar =()=>{
                 })}
             </ul>
         </nav>
+      </>
     )
 }
 
