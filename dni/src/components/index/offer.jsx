@@ -69,7 +69,7 @@ const Offer =()=>{
     return(
         <div className="offers bg-white sm:p-[100px] py-[50px]">
             <div>
-                <div className=" w-[80%] mx-auto sm:w-[100%] grid sm:grid-cols-3 gap-[30px]">
+                <div className=" w-[80%] mx-auto sm:w-[100%] grid md:grid-cols-2 xl:grid-cols-3 gap-[30px]">
                     <div className="offer items-center text-center my-auto">
                         <h2 className="text-[40px] font-gruppo font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-fuchsia-600">OFERTA SZKOŁY</h2>
                         <p className="text-[20px] text-justify w-full sm:w-[80%] mx-auto my-[20px]">ZSTiO znajduje się w samym centrum Jarosławia, dzięki temu uczniowie dojeżdżający spoza miasta nie maja kłopotów z dotarciem do szkoły.</p>

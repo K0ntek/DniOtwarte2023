@@ -129,12 +129,12 @@ export default function Quiz() {
 
 	if (!formFilled)
 		return (
-			<div className="my-[100px] w-[80%] m-auto bg-black text-white px-[20px] py-[100px] rounded-3xl justify-center text-center grid grid-cols-[30%_2px_69%]" id="formularz">
-				<div className="form_content">
-					<h1 className=" font-orbitron text-[40px] text-center m-auto py-[50px]">WPROWADŹ DANE, ABY ROZPOCZĄĆ QUIZ O NASZEJ SZKOLE</h1>
+			<div className="my-[100px] w-[80%] m-auto bg-black text-white px-[20px] py-[100px] rounded-3xl justify-center text-center grid xl:grid-cols-[30%_2px_69%]" id="formularz">
+				<div className="form_content border-b-[2px] border-[crimson] xl:border-0 w-[90%] mx-auto">
+					<h1 className=" font-orbitron text-[40px] text-center m-auto py-[50px] w-[60%] xl:w-full">WPROWADŹ DANE, ABY ROZPOCZĄĆ QUIZ O NASZEJ SZKOLE</h1>
 				</div>
 				<div className=" w-[2px] h-[100%] ml-[20px] bg-[crimson]"></div>
-				<div className="form my-auto">
+				<div className="form my-auto ml-[25px]">
 					<div className="justify-center m-auto text-center grid grid-cols-2">
                         <p className="text-[20px] font-mono text-right">Imię i nazwisko (opcjonalnie): </p>
 					<input
@@ -200,8 +200,8 @@ export default function Quiz() {
 
 	if (quizFinished) {
 		return (
-			<div className="formularz bg-black w-[80%] mx-auto my-[100px] py-[50px] grid grid-cols-[30%_10px_69%] rounded-3xl" id="formularz">
-				<div className="text-center">
+			<div className="formularz bg-black w-[80%] mx-auto my-[100px] py-[50px] grid xl:grid-cols-[30%_10px_69%] rounded-3xl" id="formularz">
+				<div className="text-center border-b-[2px] border-[crimson] xl:border-0 w-[90%] mx-auto">
 					<h1 className="text-[crimson] font-gruppo font-bold text-[60px]">Twój Wynik:</h1>
 					<div className="">
 					<h2 className=" font-orbitron text-white text-[40px]">
@@ -209,7 +209,7 @@ export default function Quiz() {
 					</h2>
 					</div>
 				</div>
-				<div className="w-[2px] h-[100%] bg-[crimson] ml-[-60px]"></div>
+				<div className="w-[2px] h-[100%] bg-[crimson] ml-[-60px] justify-center"></div>
 				<div>
 					<ResultsTable overflow="scroll" />
 				</div>
@@ -219,7 +219,7 @@ export default function Quiz() {
 
 	return (
 			<div className="quiz" id="quiz">
-			<div className="questions my-[100px] w-[80%] m-auto bg-black rounded-3xl text-white px-[20px] py-[100px] grid grid-cols-2">
+			<div className="questions my-[100px] w-[80%] m-auto bg-black rounded-3xl text-white px-[20px] py-[100px] grid lg:grid-cols-2 mx-auto justify-center">
 				<div>
 				<h1 className="font-orbitron text-[40px] ml-[50px]">Pytanie <span className="text-[crimson]">{currentQuestion + 1}</span></h1>
 				<p className="text-[25px] font-gruppo font-extrabold ml-[150px]">{questions[currentQuestion].question}</p>
@@ -240,7 +240,7 @@ export default function Quiz() {
 						))}
 					</ul>
 
-					<div className="buttons absolute bottom-[20%] ml-[-50px]">
+					<div className="buttons  ml-[-50px]">
 						{currentQuestion !== 0 ? (
 							<button className="prev mx-[10px] mt-[40px] px-[25px] py-[10px] border-[2px] border-[crimson] font-gruppo font-extrabold text-[20px] text-[#ffa9ba] rounded-full hover:bg-[crimson] hover:text-black transition-all duration-300" onClick={() => setCurrentQuestion(currentQuestion - 1)}>
 								Poprzednie

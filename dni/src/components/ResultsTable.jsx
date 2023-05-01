@@ -28,7 +28,7 @@ export default function ResultsTable(props) {
 			// 	overflowY: props.overflow === "scroll" ? "auto" : "hidden",
 			// }}
 		>
-			<table style={{ width: "100%", color: "white", fontSize: "2rem" }}>
+			<table style={{ width: "100%", color: "white", fontSize: "2rem", textAlign:'center' }}>
 				<thead>
 					<tr>
 						<td>Miejsce</td>

@@ -26,7 +26,7 @@ const Banner =()=>{
     return(
     <div className=' header grid 2xl:grid-cols-2 2xl:container mx-auto 2xl:flex-row items-center my-[30px] mt-[60px] font-mono w-[100%] min-h-screen'>
         <div className=' banner w-[70%] m-auto lg:w-full text-center'>
-        <h1 className='title text-[25px] sm:text-[40px] text-center font-orbitron'>Zespół Szkół Technicznych i Ogólnokształcacych</h1>
+        <h1 className='title text-[25px] sm:text-[40px] w-[80%] mx-auto xl:w-full text-center font-orbitron'>Zespół Szkół Technicznych i Ogólnokształcacych</h1>
             <TypeAnimation
                 sequence={[
                     'Dni otwarte',

@@ -45,10 +45,10 @@ const Navbar =()=>{
         </div>
 
         <nav className={`fixed top-[40px] md:top-0 left-[100%] md:left-0 bg-red-700 w-[80%] text-black font-orbitron md:w-full h-[100%] md:h-[60px] z-40 overflow-hidden ${activeNavbar}`}>
-            <ul className='md:flex justify-center'>
+            <ul className='md:flex justify-center mt-[40%]'>
                 {Navigation.map((element, key)=>{
                     return(
-                        <li index={key} className='mx-[30px] my-[15px]'><Link to={element.link} className='px-[20px] py-[10px] hover:text-[18px] hover:font-bold transition-all duration-200'>{element.title}</Link></li>
+                        <li index={key} className='mx-[30px] my-[15px]'><Link to={element.link} className='px-[20px] py-[10px] text-[20px] hover:text-[18px] hover:font-bold transition-all duration-200'>{element.title}</Link></li>
                     )
                 })}
             </ul>
