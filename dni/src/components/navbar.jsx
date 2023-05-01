@@ -48,7 +48,7 @@ const Navbar =()=>{
             <ul className='md:flex justify-center'>
                 {Navigation.map((element, key)=>{
                     return(
-                        <li index={key} className='mx-[30px] my-[15px]'><Link to={element.link} className='px-[20px] py-[10px]'>{element.title}</Link></li>
+                        <li index={key} className='mx-[30px] my-[15px]'><Link to={element.link} className='px-[20px] py-[10px] hover:text-[18px] hover:font-bold transition-all duration-200'>{element.title}</Link></li>
                     )
                 })}
             </ul>

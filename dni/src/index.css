@@ -17,7 +17,7 @@ body{
     background: rgb(220, 20, 60);
     color: black;
 }
- nav a::after{
+ /* nav a::after{
 	content: "";
 	display: block;
 	width: 0;
@@ -27,12 +27,7 @@ body{
 	transition: width 0.3s ease-in-out;
     position: relative;
     margin: 5px auto;
-}
-
- nav a:hover::after{
-    width: 100%;
-    margin: auto;
-}
+} */
 
 ::-webkit-scrollbar {
     width: 4px;
